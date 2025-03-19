@@ -1,4 +1,26 @@
-# Welcome to your Lovable project
+# Trikonantara
+
+This is the Trikonantara project repository. 
+
+## Note on Image Files
+
+Some large image files have been excluded from this repository to keep the repository size manageable. When running the project locally, you may need to add your own image files to the `public/lovable-uploads` directory.
+
+## Development
+
+To run the project locally:
+
+1. Clone this repository
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+
+## Technologies Used
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
 
 ## Project info
 
@@ -49,16 +71,6 @@ npm run dev
 - Select the "Codespaces" tab.
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
 ## How can I deploy this project?
 
