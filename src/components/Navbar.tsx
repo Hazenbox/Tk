@@ -1,10 +1,10 @@
-
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import AboutModal from "./AboutModal";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { getImagePath } from "@/utils/imageUtils";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
             className="flex items-center"
           >
             <img 
-              src={scrolled ? "/lovable-uploads/3909bc85-5635-4d15-8c93-0962e071aba0.png" : "/lovable-uploads/6ae22019-d3b9-4d9e-a3c4-d8037ded2144.png"} 
+              src={getImagePath(scrolled ? "/lovable-uploads/3909bc85-5635-4d15-8c93-0962e071aba0.png" : "/lovable-uploads/6ae22019-d3b9-4d9e-a3c4-d8037ded2144.png")} 
               alt="Trikonantara Logo" 
               className="h-8 mr-2" 
             />

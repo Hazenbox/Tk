@@ -1,9 +1,9 @@
-
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ArrowRight } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import ContactForm from "../ContactForm";
+import { getImagePath } from "@/utils/imageUtils";
 
 const HeroSection: React.FC = () => {
   const sectionId = "hero-section";
@@ -84,7 +84,7 @@ const HeroSection: React.FC = () => {
       {/* Background image with 70% opacity (updated from 55%) */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/lovable-uploads/c11a5cab-3262-4176-a476-f7843598ce3a.png" 
+          src={getImagePath("/lovable-uploads/c11a5cab-3262-4176-a476-f7843598ce3a.png")} 
           alt="VR Background" 
           className="w-full h-full object-cover absolute inset-0 opacity-70"
         />

@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Instagram, Facebook, Linkedin, Twitter, Youtube } from "lucide-react";
@@ -7,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "../ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import ContactForm from "../ContactForm";
+import { getImagePath } from "@/utils/imageUtils";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -118,7 +118,7 @@ const CTASection: React.FC = () => {
           <div className="mb-6 text-center">
             <div className="flex justify-center mb-1">
               <img 
-                src="/lovable-uploads/56b9bfab-5919-424f-b808-0a73bd735e7f.png" 
+                src={getImagePath("/lovable-uploads/56b9bfab-5919-424f-b808-0a73bd735e7f.png")} 
                 alt="Trikonantara Logo" 
                 className="h-20 mb-0" 
               />

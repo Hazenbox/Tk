@@ -1,4 +1,3 @@
-
 import React, { useRef } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -7,6 +6,7 @@ import CustomCursor from "../components/CustomCursor";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Linkedin } from "lucide-react";
+import { getImagePath } from "@/utils/imageUtils";
 
 const About = () => {
   // Basic reveal animation for elements
@@ -116,19 +116,19 @@ const About = () => {
     {
       name: "Kiran Mudhili",
       position: "Founder & Chief AR/VR Tech Head",
-      image: "/lovable-uploads/8b90a88a-fd23-40f1-8cd2-14913e3b46a6.png",
+      image: getImagePath("/lovable-uploads/8b90a88a-fd23-40f1-8cd2-14913e3b46a6.png"),
       linkedin: "https://www.linkedin.com/in/mudhilikiran/"
     },
     {
       name: "Sai Pradeep Goud",
       position: "Founder & Chief Business Head",
-      image: "/lovable-uploads/0b33174d-09b4-45f2-ae15-93c39ea68601.png",
+      image: getImagePath("/lovable-uploads/0b33174d-09b4-45f2-ae15-93c39ea68601.png"),
       linkedin: "https://www.linkedin.com/in/srimanthulla-saipradeepgoud/"
     },
     {
       name: "Nagaraju Pandi",
       position: "Founder & Chief 3D Tech Head",
-      image: "/lovable-uploads/fe111264-f53d-43d1-9b62-e41ef44ca5cf.png",
+      image: getImagePath("/lovable-uploads/fe111264-f53d-43d1-9b62-e41ef44ca5cf.png"),
       linkedin: "https://www.linkedin.com/in/nagaraju-pandi/"
     }
   ];
@@ -180,8 +180,8 @@ const About = () => {
               <div className="mt-8">
                 <h3 className="text-xl font-medium mb-4 text-pebble-darkBlue font-funnel">Associated with</h3>
                 <div className="flex flex-col space-y-4">
-                  <img src="/lovable-uploads/4eeead38-8221-4629-867d-ac3cf7391273.png" alt="NITI Aayog & AIM Partner Logo" className="h-20 partner-logo" />
-                  <img src="/lovable-uploads/ece65d10-2de9-4521-bebb-18990da2a976.png" alt="ACIC-CBIT Partner Logo" className="h-20 partner-logo" />
+                  <img src={getImagePath("/lovable-uploads/4eeead38-8221-4629-867d-ac3cf7391273.png")} alt="NITI Aayog & AIM Partner Logo" className="h-20 partner-logo" />
+                  <img src={getImagePath("/lovable-uploads/ece65d10-2de9-4521-bebb-18990da2a976.png")} alt="ACIC-CBIT Partner Logo" className="h-20 partner-logo" />
                 </div>
               </div>
               
@@ -201,7 +201,7 @@ const About = () => {
               <div className="bg-pebble-offWhite rounded-xl overflow-hidden shadow-md">
                 <div className="overflow-hidden">
                   <img 
-                    src="public/lovable-uploads/789b56f2-093e-4961-a436-b091c1f2a2ca.png" 
+                    src={getImagePath("/lovable-uploads/789b56f2-093e-4961-a436-b091c1f2a2ca.png")} 
                     alt="About Trikonantara" 
                     className="w-full h-auto object-cover parallax-image transition-transform duration-700 hover:scale-105"
                   />

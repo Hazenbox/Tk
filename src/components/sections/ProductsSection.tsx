@@ -1,7 +1,7 @@
-
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getImagePath } from "@/utils/imageUtils";
 
 // Register ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -123,7 +123,7 @@ const ProductsSection: React.FC = () => {
               {/* Image Section */}
               <div className="md:w-1/2 overflow-hidden">
                 <img 
-                  src="/lovable-uploads/f208b926-b130-4b04-aa8c-5ebd9ef7f2ba.png" 
+                  src={getImagePath("/lovable-uploads/f208b926-b130-4b04-aa8c-5ebd9ef7f2ba.png")} 
                   alt="Bharat VR - Virtual Reality Experience" 
                   className="w-full h-full object-cover transition-transform group-hover:scale-105" 
                 />
