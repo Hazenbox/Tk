@@ -25,6 +25,7 @@ To run the project locally:
 ## Project info
 
 **URL**: https://lovable.dev/projects/b9a88545-82ce-4e2f-838c-4435669fb5c7
+**GitHub Pages**: https://hazenbox.github.io/Tk/
 
 ## How can I edit this code?
 
@@ -74,7 +75,27 @@ npm run dev
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/b9a88545-82ce-4e2f-838c-4435669fb5c7) and click on Share -> Publish.
+This project is configured to be deployed to GitHub Pages using the gh-pages package.
+
+To deploy manually:
+1. Build the project: `npm run build`
+2. Deploy to GitHub Pages: `npm run deploy`
+
+The site will be available at: https://hazenbox.github.io/Tk/
+
+### Setting up GitHub Pages
+
+To properly set up GitHub Pages for this repository:
+
+1. Go to the GitHub repository settings
+2. Navigate to the "Pages" section
+3. Under "Build and deployment", select "Deploy from a branch"
+4. For "Branch", select "gh-pages" and "/(root)"
+5. Click "Save"
+
+After deployment, the site will be available at https://hazenbox.github.io/Tk/
+
+You can also visit [Lovable](https://lovable.dev/projects/b9a88545-82ce-4e2f-838c-4435669fb5c7) and click on Share -> Publish.
 
 ## I want to use a custom domain - is that possible?
 
