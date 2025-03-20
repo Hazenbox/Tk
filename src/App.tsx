@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,6 +16,16 @@ import AboutModal from "./components/AboutModal";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
+
+// Determine the basename for the router based on environment
+const getBasename = () => {
+  // Use the base path from Vite config in production
+  if (import.meta.env.PROD) {
+    return '/Tk';
+  }
+  // No base path needed in development
+  return '/';
+};
 
 const queryClient = new QueryClient();
 
@@ -67,7 +76,7 @@ const App = () => {
       
       setTimeout(() => {
         dialogTrigger.click();
-        window.location.href = '/';
+        window.location.href = getBasename() + '/';
       }, 100);
       
       return () => {
@@ -88,7 +97,7 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename={getBasename()}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<AboutRedirect />} />
